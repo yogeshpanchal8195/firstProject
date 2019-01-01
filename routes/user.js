@@ -55,9 +55,6 @@ router.post('/', async (req, res) => {
 
         // send mail with defined transport object
         transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                return res.status(500).send("Internal server error");
-            }
             console.log('Message sent: %s', info.messageId);
             console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
         });
