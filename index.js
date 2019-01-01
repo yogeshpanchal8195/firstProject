@@ -32,7 +32,7 @@ if (!config.get('jwtPrivateKey')) {
 //     .catch((err) => console.log(err));
 
 
-    mongoose.connect('mongodb://localhost/rough', {
+    mongoose.connect('mongodb://yogesh12345:Yogesh123@ds147344.mlab.com:47344/rough', {
         useNewUrlParser: true 
       });
     //   mongoose.connection.openUri('mongodb://localhost/rough',{useNewUrlParser : true})
