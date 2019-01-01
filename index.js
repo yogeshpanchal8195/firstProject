@@ -28,7 +28,7 @@ mongoose.connect('mongodb://localhost/rough', { useNewUrlParser: true })
     .then(() => console.log("connected to the database"))
     .catch((err) => console.log(err));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
     // console.log(FOO);
