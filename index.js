@@ -16,6 +16,9 @@ app.use(express.json());
 app.use(bodyparser.json());
 // app.use(bodyparser.urlencoded({extended:true}))
 app.use(express.urlencoded({extended:true}));
+app.get('/',function(req,res){
+    res.status(200).send('hlo chutiya')
+});
 app.use('/user', user);
 app.use('/auth', auth);
 
