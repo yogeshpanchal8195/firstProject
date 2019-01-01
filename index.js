@@ -24,7 +24,7 @@ if (!config.get('jwtPrivateKey')) {
     process.exit(1);
 }
 
-mongoose.connect('mongodb://localhost/rough', { useNewUrlParser: true })
+mongoose.connect('mongodb://localhost:27017/rough', { useNewUrlParser: true })
     .then(() => console.log("connected to the database"))
     .catch((err) => console.log(err));
 
