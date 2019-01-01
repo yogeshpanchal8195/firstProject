@@ -1,5 +1,7 @@
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const async = require('async');
+
 
 module.exports = function (req, res, next) {
     console.log(req.body)
