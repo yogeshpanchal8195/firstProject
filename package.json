@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1" ,
-    "start" : "export kndbakshdjbdkf && node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "export kndbakshdjbdkf && node index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,7 @@
     "body-parser": "^1.18.3",
     "config": "^3.0.1",
     "cors": "^2.8.5",
+    "express": "^4.16.4",
     "generate-password": "^1.4.1",
     "joi": "^14.3.0",
     "jsonwebtoken": "^8.4.0",
