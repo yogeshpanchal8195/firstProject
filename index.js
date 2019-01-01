@@ -27,9 +27,16 @@ if (!config.get('jwtPrivateKey')) {
     process.exit(1);
 }
 
-mongoose.connect('mongodb://yogesh12345:Yogesh@123@ds147344.mlab.com:47344/rough', { useNewUrlParser: true })
-    .then(() => console.log("connected to the database"))
-    .catch((err) => console.log(err));
+// mongoose.connect('mongodb://localhost/rough', { useNewUrlParser: true })
+//     .then(() => console.log("connected to the database"))
+//     .catch((err) => console.log(err));
+
+
+    mongoose.connect('mongodb://localhost/rough', {
+        useNewUrlParser: true 
+      });
+    //   mongoose.connection.openUri('mongodb://localhost/rough',{useNewUrlParser : true})
+
 
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
