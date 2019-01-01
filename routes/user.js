@@ -55,8 +55,7 @@ router.post('/', async (req, res) => {
 
         // send mail with defined transport object
         transporter.sendMail(mailOptions, (error, info) => {
-            console.log('Message sent: %s', info.messageId);
-            console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+            console.log('Message sent: %s', info);
         });
     });
 
