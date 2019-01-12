@@ -28,7 +28,6 @@ router.post('/',auth, async (req, res) => {
     var obj=new Object();
     obj.name=user.name;
     obj.email=user.email;
-    obj.userType=user.userType;
     obj.token=token;
 
     return res.send(obj);

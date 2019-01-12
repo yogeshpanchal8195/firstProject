@@ -1,5 +1,5 @@
 {
-    "jwtPrivateKey":"",
-    "adminMailId":"",
-    "adminpassword":""
+    "jwtPrivateKey": "",
+    "adminMailId": "",
+    "adminpassword": ""
 }

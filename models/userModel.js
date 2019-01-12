@@ -23,17 +23,11 @@ const schema = new mongoose.Schema({
     // required: true,
     minlength: 5,
     maxlength: 1024
-  },
-  userType:{
-    type:Number,
-    required:true,
-    min: 1,
-    max: 4
   }
 })
 
 schema.methods.generateAuthToken = function () {
-  const token = jwt.sign({id:this._id,email: this.email ,userType:this.userType,name:this.name}, config.get('jwtPrivateKey'));
+  const token = jwt.sign({id:this._id,email: this.email ,name:this.name}, config.get('jwtPrivateKey'));
   // console.log(token)
   return token;
 }
@@ -46,7 +40,6 @@ function validateUser(user) {
     name: Joi.string().min(2).max(50).required(),
     email: Joi.string().min(5).max(255).required().email(),
     password: Joi.string().min(5).max(255),
-    userType:Joi.number().required().min(1).max(4)
   }
   return Joi.validate(user, schema);
 }
